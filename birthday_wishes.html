@@ -1,0 +1,172 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday My Love ❤️</title>
+  <link href="https://fonts.googleapis.com/css2?family=Sacramento&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right top, #ffb6c1, #ffe4e1);
+      color: #333;
+      padding: 20px;
+    }
+    header {
+      text-align: center;
+      padding: 40px 20px 10px;
+    }
+    header h1 {
+      font-family: 'Sacramento', cursive;
+      font-size: 60px;
+      color: #d6336c;
+    }
+    .message {
+      text-align: center;
+      font-size: 20px;
+      margin-top: 20px;
+    }
+    .timeline {
+      margin: 40px auto;
+      max-width: 900px;
+    }
+    .event {
+      background: #fff;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .event h3 {
+      color: #d6336c;
+    }
+    .footer {
+      text-align: center;
+      margin-top: 60px;
+      font-size: 18px;
+    }
+    .surprise {
+      margin: 50px auto;
+      text-align: center;
+    }
+    .btn {
+      padding: 12px 24px;
+      font-size: 18px;
+      border: none;
+      border-radius: 25px;
+      background-color: #d6336c;
+      color: #fff;
+      cursor: pointer;
+      transition: background 0.3s;
+      margin: 10px;
+    }
+    .btn:hover {
+      background-color: #a61e4d;
+    }
+    .poem {
+      display: none;
+      margin-top: 30px;
+      font-style: italic;
+      font-size: 20px;
+      white-space: pre-wrap;
+      line-height: 1.6;
+      color: #6d214f;
+    }
+    audio {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <audio autoplay loop>
+    <source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <header>
+    <h1>Happy Birthday, My Shreesakhi 🎂</h1>
+    <div class="message">This is your special corner of the internet — made with love, code, and memories ❤️</div>
+  </header>
+
+  <section class="timeline">
+    <div class="event">
+      <h3>📍 Our First Confession </h3>
+      <p>26th February , a sacred start to this beautiful journey.</p>
+    </div>
+    <div class="event">
+      <h3>🎡 Our Funniest Memory</h3>
+      <p>Remember that first LOP meet and lecture bunk after? Still laughing !</p>
+    </div>
+    <div class="event">
+      <h3>❤️ Our Deepest Talk</h3>
+      <p>The moment I saw your soul and felt home,the day I cried.</p>
+    </div>
+  </section>
+
+  <section class="surprise">
+    <h2>✨ A Small Surprise</h2>
+    <button class="btn" onclick="revealPoem()">Click to Reveal a Poem</button>
+    <div id="poem1" class="poem">
+तुझं हसू असावं रोज सोबत माझ्या,
+तुझं नाव असावं माझ्या प्रत्येक श्वासाच्या मागं।
+आज तुझा वाढदिवस, प्रेम भरून साजरा करतो,
+माझं सारं जग ... आज फक्त तुझ्यासाठी जपतो! 🎂💖
+    </div>
+    <div id="poem2" class="poem">
+Your smile, a spark that lights my day,❤️  
+A gentle breeze that guides my way.  
+In every laugh, in every glance,❤️  
+You give my silent heart a dance.
+    </div>
+    <div id="poem3" class="poem">
+I searched the world for something true,  
+But all I ever needed was you.❤️
+Not just love, but peace you give —  
+In your arms, I breathe, I live.❤️
+    </div>
+    <div id="poem4" class="poem">
+Even when the skies are gray,  
+You turn my storms to calmest day.  
+With just one word, with just one touch,  
+You show me love, that means so much.
+</div>
+
+<div id="poem5" class="poem">
+You're not a chapter, you're my book,  
+The smile I wear, the breath I took.  
+Each heartbeat softly speaks your name,  
+Forever mine, in love's sweet flame.
+</div>
+
+    <button class="btn" onclick="nextPoem()">Next Poem</button>
+  </section>
+
+  <div class="footer">
+    With infinite love, <strong>Your Shardul(Raje 💖) 💻❤️</strong>
+  </div>
+
+  <script>
+    let poemIndex = 1;
+    function revealPoem() {
+      document.getElementById('poem1').style.display = 'block';
+      confetti({ particleCount: 200, spread: 90, origin: { y: 0.6 } });
+    }
+
+    function nextPoem() {
+      poemIndex++;
+      const nextPoem = document.getElementById('poem' + poemIndex);
+      if (nextPoem) {
+        nextPoem.style.display = 'block';
+        confetti({ particleCount: 150, spread: 70, origin: { y: 0.6 } });
+      }
+    }
+  </script>
+</body>
+</html>
